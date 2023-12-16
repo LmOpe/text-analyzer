@@ -12,9 +12,7 @@ app = Flask(__name__)
 # to stop caching static file
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
-
-nltk.download('punkt')
-nltk.download('stopwords')
+nltk.data.path.append('./nltk_data')
 
 
 def calculate_lexical_density(words):
